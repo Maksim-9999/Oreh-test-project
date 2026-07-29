@@ -69,12 +69,12 @@ navMenu.addEventListener("click", () => {
 });
 
 try {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".test", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     pagination: {
-      el: ".slider__swiper-pagination",
+      el: ".swiper-pagination.slider__swiper-pagination",
       clickable: true,
     },
     // navigation: {
@@ -103,7 +103,7 @@ try {
     spaceBetween: 30,
     loop: true,
     pagination: {
-      el: ".client__swiper-pagination",
+      el: ".swiper-pagination.client__swiper-pagination",
       clickable: true,
     },
     // navigation: {

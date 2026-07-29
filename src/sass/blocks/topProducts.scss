@@ -166,6 +166,10 @@
       &__title {
         font-size: 20px;
       }
+      &__img {
+        width: 305px;
+        height: 219px;
+      }
       &__link {
         a {
           width: 178px;
@@ -210,6 +214,10 @@
         font-size: 22px;
         margin-top: 11px;
       }
+      &__img {
+        width: 387px;
+        height: 295px;
+      }
       &__price {
         margin-top: 18px;
       }
@@ -230,7 +238,8 @@
     }
     .swiper {
       &__img {
-        // height: 280px;
+        width: 407px;
+        height: 310px;
       }
       &-pagination {
         margin-top: 55px;

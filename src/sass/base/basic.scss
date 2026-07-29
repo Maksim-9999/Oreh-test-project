@@ -46,21 +46,19 @@ html {
 
 @media screen and (min-width: 768px) {
   .container {
-    padding: 0 40px;
-    width: 768px;
+    padding: 0;
+    width: 688px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container {
-    padding: 0 100px;
-    width: 1440px;
+    width: 1240px;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .container {
-    padding: 0 120px;
-    width: 1920px;
+    width: 1680px;
   }
 }

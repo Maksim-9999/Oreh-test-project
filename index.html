@@ -546,7 +546,7 @@
     <section class="slider">
         <div class="container">
             <h2 class="slider__title">Популярні продукти</h2>   
-            <div class="swiper">
+            <div class="swiper test">
   
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -640,8 +640,8 @@
 <div class="container">
     <h2 class="client__title">Нaші клієнти</h2>
     <!-- Slider main container -->
-<div class="swiper__client">
-  <!-- Additional required wrapper -->
+<div class="swiper__client swiper">
+  
   <div class="swiper-wrapper">
 
     <div class="swiper-slide"><img src="/src/img/clients_logo/image 19.png" alt="c"></div>
@@ -686,12 +686,12 @@
             <h2 class="contact__order-subtitle">Оберіть тип горіху</h2>
             <form action="order" class="contact__form">
 
-                <div class="contact__nut radio">
+                <div class="contact__nut radio" id="radio" >
                     
-                <label for="radio"> <input type="radio" id="radio" name="radio" value="walnut" /><span>Волоський горіх</span></label>
+                <label for="radio"> <input type="radio" name="radio" value="walnut" /><span>Волоський горіх</span></label>
                      
-                <label for="radio"> <input type="radio" id="radio" name="radio" value="hazelnut" />фундук</label> 
-                <label for="radio"><input type="radio" id="radio" name="radio" value="almond" />Мигдаль</label>
+                <label for="radio"> <input type="radio"  name="radio" value="hazelnut" />фундук</label> 
+                <label for="radio"><input type="radio"  name="radio" value="almond" />Мигдаль</label>
                 <div class="radio__error"></div>
                 </div>
                 <div class="contact__input">
