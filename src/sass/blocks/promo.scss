@@ -1,8 +1,7 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .promo {
-  // position: relative;
-  min-height: 100vh;
+  padding-bottom: 10px;
   background:
     linear-gradient(180deg, #151516 0%, rgba(0, 0, 0, 0) 100%),
     url(/src/img/industrial-nut-processing-conveyor-belt-with-various-nuts-quality-checking-packaging\ 1.jpg)
@@ -34,18 +33,20 @@
     color: #333537;
   }
   &__social {
-    position: absolute;
-    bottom: 50px;
     display: flex;
+    justify-content: center;
     column-gap: 10px;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 20px 0px;
   }
   &__icon {
     border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 8px;
     width: 34px;
     height: 34px;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 @media screen and (min-width: 768px) {
@@ -67,10 +68,7 @@
       height: 60px;
     }
     &__social {
-      bottom: 32px;
-      right: 20px;
-      left: auto;
-      transform: none;
+      justify-content: end;
     }
   }
 }
@@ -117,53 +115,5 @@
     &__social {
       bottom: 52px;
     }
-  }
-}
-
-.promo2 {
-  // position: relative;
-  min-height: 100vh;
-  background:
-    linear-gradient(180deg, #151516 0%, rgba(0, 0, 0, 0) 100%),
-    url(/src/img/industrial-nut-processing-conveyor-belt-with-various-nuts-quality-checking-packaging\ 1.jpg)
-      73% / cover no-repeat;
-
-  &__title {
-    line-height: 38px;
-    font-weight: 400;
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
-  }
-  &__subtitle {
-    margin-top: 20px;
-    line-height: 23px;
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    color: #d9d9d9;
-  }
-  &__btn {
-    padding: 12.5px 49px;
-    width: 217px;
-    height: 45px;
-    margin: 40px auto 0 auto;
-    text-align: center;
-    text-decoration: none;
-    color: #333537;
-  }
-  &__social {
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    column-gap: 10px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  &__icon {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 8px;
-    width: 34px;
-    height: 34px;
   }
 }

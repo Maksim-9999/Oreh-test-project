@@ -22,20 +22,14 @@
     display: grid;
     grid-template-rows: 2, 1fr;
   }
-  // &__card {
-  //   padding: 24px 23px 31px 23px;
-  //   border: 1px solid #e3e6ee;
-  //   // height: 591px;
-  //   background: #f6f6f3;
-  //   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.27);
-  // }
+
   .swiper {
     margin-top: 40px;
-
     display: relative;
+    padding: 11px;
 
     &__slide {
-      // height: 591px;
+      height: auto;
       padding: 24px 23px 31px 23px;
       background: #f6f6f3;
       border: 1px solid #e3e6ee;
@@ -48,13 +42,14 @@
       img {
         height: 100%;
         width: 100%;
-        // object-fit: cover;
+        object-fit: cover;
       }
     }
     &__link {
       display: flex;
       height: 40px;
       justify-content: space-between;
+
       a {
         display: flex;
         justify-content: space-between;

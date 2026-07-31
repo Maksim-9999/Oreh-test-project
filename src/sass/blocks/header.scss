@@ -8,10 +8,13 @@
     height: 100vh;
     z-index: 10;
     visibility: hidden;
+    overflow-y: auto;
     opacity: 0;
     background: #222327;
     transition: all 0.6s;
     &-products {
+      display: flex;
+      padding: 0;
       display: none;
       flex-direction: column;
       gap: 2px;
@@ -25,18 +28,22 @@
         row-gap: 10px;
       }
     }
+    &-item {
+      list-style: none;
+      padding: 0;
+    }
     &-nut {
       padding: 2px 5px;
-      display: grid;
-      grid-template-columns: repeat(2, auto);
+      display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: space-between;
 
       &.yellow {
         color: #ffcd05;
       }
     }
     &-nuts {
+      list-style: none;
       padding: 2px 12px;
       display: none;
       flex-direction: column;
@@ -68,7 +75,7 @@
     &-product {
       display: flex;
       align-items: center;
-      gap: 2px;
+      gap: 3px;
       font-weight: 300;
       font-size: 16px;
       line-height: 20px;
@@ -80,12 +87,19 @@
       }
     }
     &-icon {
-      fill: currentColor;
-      img {
-        fill: currentColor;
-      }
+      width: 7px;
+      height: 4px;
+      background-image: url(/src/img/menu__icons/white-arrow.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition:
+        transform 0.3s ease,
+        background-image 0.3s ease;
+      transform: rotate(0deg);
       &.rotate {
-        // background-color: #ffcd05;
+        background-image: url(/src/img/menu__icons/yelow-arrow.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
         transform: rotate(180deg);
       }
     }
@@ -114,25 +128,34 @@
       row-gap: 30px;
     }
     &-tel {
+      text-decoration: none;
+
       display: flex;
       column-gap: 7px;
-      a {
-        text-decoration: none;
-        font-weight: 500;
-        line-height: 18px;
-        font-size: 14px;
-        text-transform: lowercase;
-        color: #d9d9d9;
-      }
+      text-decoration: none;
+      font-weight: 500;
+      line-height: 18px;
+      font-size: 14px;
+      text-transform: lowercase;
+      color: #d9d9d9;
     }
     &-social {
+      list-style: none;
+      padding: 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      li {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        // padding: 8px;
+      }
       a {
+        display: block;
         width: 34px;
         height: 34px;
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -141,6 +164,7 @@
     padding-top: 20px;
     position: relative;
     &-wrapper {
+      padding-top: 5px;
       display: flex;
       justify-content: space-between;
       .burger {
@@ -165,12 +189,12 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    width: 141px;
-    height: 27px;
+    width: 110px;
+    height: 32px;
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
   &__icons {
@@ -191,8 +215,11 @@
 @media screen and (min-width: 768px) {
   .header {
     &__logo {
-      width: 150px;
-      height: 29px;
+      width: 120px;
+      height: 35px;
+    }
+    &__top-wrapper {
+      padding-top: 7px;
     }
   }
 }
@@ -213,9 +240,9 @@
       }
     }
     &__logo {
-      top: 25px;
-      width: 190px;
-      height: 36px;
+      top: 37px;
+      width: 150px;
+      height: 45px;
     }
     &__nav {
       display: flex;
@@ -254,6 +281,7 @@
           }
         }
       }
+
       &-menu {
         display: flex;
         gap: 2px;
@@ -285,16 +313,14 @@
       &-tel {
         display: flex;
         gap: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: lowercase;
+        color: #d9d9d9;
         img {
           width: 14px;
           height: 14px;
-        }
-        a {
-          text-decoration: none;
-          font-weight: 500;
-          font-size: 16px;
-          text-transform: lowercase;
-          color: #d9d9d9;
         }
       }
     }
@@ -312,8 +338,8 @@
       gap: 80px;
     }
     &__logo {
-      width: 264px;
-      height: 50px;
+      width: 190px;
+      height: 70px;
     }
     &__nav {
       &-menu {

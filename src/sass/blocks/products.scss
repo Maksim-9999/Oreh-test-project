@@ -9,19 +9,27 @@
   }
   &__cards {
     margin-top: 40px;
-    display: grid;
-    row-gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
   &__card {
-    display: grid;
-    grid-template-rows: 216px auto;
+    display: flex;
+    flex-direction: column;
+    // grid-template-rows: 216px auto;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.27);
   }
 
   &__img {
+    height: 215px;
     display: flex;
     justify-content: space-between;
     padding: 25px 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     &.walnuts {
       background:
         linear-gradient(
@@ -63,9 +71,10 @@
           no-repeat;
     }
     &-logo {
-      display: grid;
-      grid-template-columns: 51px 145px;
-      grid-template-rows: 55px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      height: 50px;
       column-gap: 15px;
       font-weight: 600;
       font-size: 20px;
@@ -74,8 +83,8 @@
       color: #fff;
       img {
         height: 100%;
-        width: 100%;
-        object-fit: cover;
+        width: 25%;
+        object-fit: contain;
       }
     }
     &-link {
@@ -98,13 +107,12 @@
   &__func {
     padding: 20px;
     background: #222327;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 138px);
-    grid-template-rows: repeat(auto-fit, 115px);
-    grid-auto-rows: 115px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
   &__link {
+    width: calc(50% - 10px);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -114,6 +122,11 @@
     align-content: center;
     text-decoration: none;
     overflow: hidden;
+    &:active {
+      background-color: #222426;
+      opacity: 0.7;
+      scale: 0.95;
+    }
     &-icon {
       height: 50px;
       width: 50px;
@@ -122,7 +135,7 @@
       img {
         height: 100%;
         width: 100%;
-        // object-fit: cover;
+        object-fit: contain;
       }
     }
     &-text {
@@ -149,8 +162,7 @@
     &__img {
       padding: 20px 20px;
       &-logo {
-        grid-template-columns: 51px 262px;
-        grid-template-rows: 55px;
+        height: 53px;
       }
       &-link {
         width: 26px;
@@ -162,8 +174,9 @@
       }
     }
     &__func {
-      grid-template-columns: repeat(auto-fit, 147px);
-      grid-template-rows: repeat(auto-fit, 106px);
+    }
+    &__link {
+      width: 147px;
     }
   }
 }
@@ -179,12 +192,16 @@
       margin-top: 30px;
     }
     &__card {
-      grid-template-columns: 573px 668px;
-      grid-template-rows: repeat(auto-fit, 266px);
+      min-height: 266px;
+      width: 100%;
+      flex-direction: row;
     }
     &__img {
+      width: 572px;
+      height: auto;
       padding: 15px;
       &-logo {
+        height: 55px;
         padding: 7px;
         font-size: 24px;
       }
@@ -198,10 +215,12 @@
       }
     }
     &__func {
-      grid-template-columns: repeat(auto-fit, 142px);
-      grid-template-rows: repeat(auto-fit, 103px);
+      width: 668px;
     }
     &__link {
+      width: 142px;
+
+      max-height: 110px;
       &:hover {
         background: #393a3c;
       }
@@ -225,8 +244,7 @@
     &__img {
       padding: 30px;
       &-logo {
-        grid-template-columns: 65px 335px;
-        grid-template-rows: 73px;
+        height: 70px;
         padding: 0;
         font-size: 30px;
       }
@@ -240,11 +258,10 @@
       }
     }
     &__func {
-      padding: 30px;
-      grid-template-columns: repeat(auto-fit, 195px);
-      grid-template-rows: repeat(auto-fit, 140px);
+      width: 900px;
     }
     &__link {
+      width: 195px;
       padding: 15px;
       &-icon {
         height: 70px;

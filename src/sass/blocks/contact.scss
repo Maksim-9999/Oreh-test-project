@@ -97,7 +97,10 @@
     text-transform: capitalize;
     color: #fff;
     width: 240px;
-
+    .radio__error {
+      display: flex;
+      align-items: center;
+    }
     label {
       display: flex;
       gap: 6px;
@@ -189,6 +192,8 @@
   }
 }
 .just-validate-error-label {
+  display: flex;
+  align-items: center;
   line-height: 20px;
 }
 
