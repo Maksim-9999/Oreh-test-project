@@ -282,12 +282,16 @@
       flex-direction: column;
 
       &-wrap {
+        padding: 0;
+        padding-bottom: 5px;
         display: flex;
         gap: 20px;
+        list-style-type: none;
       }
 
       &-nut {
-        display: none;
+        position: absolute;
+
         width: 750px;
         padding: 25px 25px;
         background-color: #222327;
@@ -330,6 +334,26 @@
         }
       }
       &-link {
+        &:hover {
+          .header {
+            &__nav {
+              &-menu {
+                color: #ffcd05;
+              }
+              &-nut {
+                display: flex;
+              }
+            }
+            &__menu {
+              &-icon {
+                background-image: url(/src/img/menu__icons/yelow-arrow.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
         a {
           text-decoration: none;
           font-weight: 300;

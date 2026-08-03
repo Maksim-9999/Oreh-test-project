@@ -1,8 +1,18 @@
 import JustValidate from "just-validate";
 
-const initFormValidation = () => {
+const initFormValidation = (showThanksPopup = () => {}) => {
   try {
-    const validator = new JustValidate(".contact__form");
+    const form = document.querySelector(".contact__form");
+    if (!form) return;
+
+    const status = form.querySelector("[data-form-status]");
+    const submitButton = form.querySelector('[type="submit"]');
+    const validator = new JustValidate(form);
+
+    const setStatus = (message = "") => {
+      if (status) status.textContent = message;
+    };
+
     validator
       .addRequiredGroup("#radio-group", "Оберіть тип горіху")
       .addField("#name", [
@@ -41,7 +51,39 @@ const initFormValidation = () => {
             .querySelector("#checkbtn")
             .parentElement.querySelector(".checkbox__error"),
         },
-      );
+      )
+      .onSuccess(async (event) => {
+        event?.preventDefault();
+        setStatus("");
+
+        if (submitButton) submitButton.disabled = true;
+
+        try {
+          const response = await fetch("/api/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(Object.fromEntries(new FormData(form))),
+          });
+
+          if (!response.ok) throw new Error("Request failed");
+
+          form.reset();
+          showThanksPopup();
+        } catch (error) {
+          console.error("Form submission failed:", error);
+          setStatus("Не вдалося надіслати заявку. Спробуйте ще раз.");
+
+          const errorModal = document.querySelector("[data-error-message]");
+          if (errorModal) {
+            errorModal.classList.add("show");
+            setTimeout(() => {
+              errorModal.classList.remove("show");
+            }, 3000);
+          }
+        } finally {
+          if (submitButton) submitButton.disabled = false;
+        }
+      });
   } catch (e) {
     console.error("Ошибка инициализации валидации:", e);
   }

@@ -6,15 +6,18 @@
   "author": "Maksim Duljuk",
   "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:vercel": "vercel dev"
   },
   "dependencies": {
     "just-validate": "^4.3.0",
     "sass": "^1.99.0",
     "swiper": "^12.1.3",
     "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "vercel": "^58.4.4"
   }
 }

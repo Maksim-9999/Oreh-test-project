@@ -1,0 +1,96 @@
+.popup__message {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  &-dialog {
+    width: 335px;
+    max-width: 100%;
+    transform: scale(0.95) translateY(10px);
+    transition: transform 0.3s ease;
+  }
+  &-content {
+    position: relative;
+    padding: 45px 20px 25px;
+    border-radius: 10px;
+    border: 1px solid #ffcd05;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #222426;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #222426;
+  }
+  &-close {
+    position: absolute;
+    border: none;
+    top: 15px;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    background: url(/src/img/menu__icons/close.svg) center center/ cover
+      no-repeat;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    .popup__message-dialog {
+      transform: scale(1) translateY(0);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .popup__message {
+    &-dialog {
+      width: 452px;
+    }
+    &-content {
+      padding: 55px 75px;
+    }
+    &-text {
+      font-size: 18px;
+    }
+    &-title {
+      font-size: 22px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .popup__message {
+    &-dialog {
+      width: 578px;
+    }
+    &-content {
+      padding: 70px 120px;
+    }
+
+    &-text {
+      font-size: 20px;
+      gap: 20px;
+    }
+    &-title {
+      font-size: 25px;
+    }
+  }
+}

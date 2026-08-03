@@ -28,7 +28,7 @@
           <div class="header__block">
             <div class="header__menu">
               <div class="header__menu-close">
-                <img src="/src/img/menu__icons/Union.svg" alt="close" />
+                <img src="/src/img/menu__icons/close-yellow.svg" alt="close" />
               </div>
               <nav class="header__menu-nav">
                 <ul class="header__menu-list">
@@ -165,21 +165,55 @@
             </div>
             <div class="header__top-wrapper">
               <div class="burger"><span></span><span></span><span></span></div>
-              <div class="header__nav">
-                <div class="header__nav-wrap">
-                  <div class="header__nav-link">
+              <nav class="header__nav">
+                <ul class="header__nav-wrap">
+                  <li class="header__nav-link">
                     <div class="header__nav-menu">
                       <p>Товари</p>
                       <div class="header__menu-icon"></div>
                     </div>
-                  </div>
-                  <div class="header__nav-link"><a href="#">Про нас</a></div>
-                  <div class="header__nav-link"><a href="#">Контакти</a></div>
-                  <div class="header__nav-link"><a href="#">Новини</a></div>
-                  <div class="header__nav-link"><a href="#">Блог</a></div>
-                  <div class="header__nav-link"><a href="#">FAQ</a></div>
-                </div>
-              </div>
+                    <div class="header__nav-nut">
+                      <ul>
+                        <li><a href="#">Переработка грецкого ореха</a></li>
+                        <li><a href="#">Сбор урожая</a></li>
+                        <li><a href="#">Стирка</a></li>
+                        <li><a href="#">Сушка</a></li>
+                        <li><a href="#">Калибровка</a></li>
+                        <li><a href="#">Трещины</a></li>
+                        <li><a href="#">Сортировка</a></li>
+                        <li><a href="#">Линии переработки</a></li>
+                      </ul>
+
+                      <ul>
+                        <li><a href="#">Переработка грецкого ореха</a></li>
+                        <li><a href="#">Сбор урожая</a></li>
+                        <li><a href="#">Стирка</a></li>
+                        <li><a href="#">Сушка</a></li>
+                        <li><a href="#">Калибровка</a></li>
+                        <li><a href="#">Трещины</a></li>
+                        <li><a href="#">Сортировка</a></li>
+                        <li><a href="#">Линии переработки</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">Переработка грецкого ореха</a></li>
+                        <li><a href="#">Сбор урожая</a></li>
+                        <li><a href="#">Стирка</a></li>
+                        <li><a href="#">Сушка</a></li>
+                        <li><a href="#">Калибровка</a></li>
+                        <li><a href="#">Трещины</a></li>
+                        <li><a href="#">Сортировка</a></li>
+                        <li><a href="#">Линии переработки</a></li>
+                        <li><a href="#">Бытовая техника</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header__nav-link"><a href="#">Про нас</a></li>
+                  <li class="header__nav-link"><a href="#">Контакти</a></li>
+                  <li class="header__nav-link"><a href="#">Новини</a></li>
+                  <li class="header__nav-link"><a href="#">Блог</a></li>
+                  <li class="header__nav-link"><a href="#">FAQ</a></li>
+                </ul>
+              </nav>
 
               <div class="header__icons">
                 <a href="tel:+380991234567" class="header__icons-tel">
@@ -192,40 +226,6 @@
                   <option value="eng">eng</option>
                 </select>
               </div>
-            </div>
-            <div class="header__nav-nut">
-              <ul>
-                <li><a href="#">Переработка грецкого ореха</a></li>
-                <li><a href="#">Сбор урожая</a></li>
-                <li><a href="#">Стирка</a></li>
-                <li><a href="#">Сушка</a></li>
-                <li><a href="#">Калибровка</a></li>
-                <li><a href="#">Трещины</a></li>
-                <li><a href="#">Сортировка</a></li>
-                <li><a href="#">Линии переработки</a></li>
-              </ul>
-
-              <ul>
-                <li><a href="#">Переработка грецкого ореха</a></li>
-                <li><a href="#">Сбор урожая</a></li>
-                <li><a href="#">Стирка</a></li>
-                <li><a href="#">Сушка</a></li>
-                <li><a href="#">Калибровка</a></li>
-                <li><a href="#">Трещины</a></li>
-                <li><a href="#">Сортировка</a></li>
-                <li><a href="#">Линии переработки</a></li>
-              </ul>
-              <ul>
-                <li><a href="#">Переработка грецкого ореха</a></li>
-                <li><a href="#">Сбор урожая</a></li>
-                <li><a href="#">Стирка</a></li>
-                <li><a href="#">Сушка</a></li>
-                <li><a href="#">Калибровка</a></li>
-                <li><a href="#">Трещины</a></li>
-                <li><a href="#">Сортировка</a></li>
-                <li><a href="#">Линии переработки</a></li>
-                <li><a href="#">Бытовая техника</a></li>
-              </ul>
             </div>
           </div>
         </div>
@@ -697,7 +697,7 @@
         <div class="contact__order">
           <h2 class="contact__order-title">оберіть асортимент продукції</h2>
           <h2 class="contact__order-subtitle">Оберіть тип горіху</h2>
-          <form action="order" class="contact__form">
+          <form class="contact__form">
             <div class="contact__nut radio" id="radio-group">
               <label
                 ><input type="radio" name="radio" value="walnut" /><span
@@ -783,7 +783,13 @@
               >
               <div class="checkbox__error"></div>
             </div>
-            <button class="contact__btn btn">Відправити</button>
+            <button class="contact__btn btn" type="submit">Відправити</button>
+            <p
+              class="contact__form-status"
+              data-form-status
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
         </div>
       </div>
@@ -872,6 +878,42 @@
         </div>
       </div>
     </footer>
+    <div data-thanks-message class="popup__message popup__thanks">
+      <div class="popup__message-dialog">
+        <div class="popup__message-content">
+          <button
+            class="popup__message-close"
+            type="button"
+            aria-label="Закрити повідомлення"
+          ></button>
+          <div class="popup__message-text">
+            <h2 class="popup__message-title">Дякую за вашу заявку!</h2>
+            <p>
+              Наш менеджер зв'яжеться з вами <br />
+              у найближчий час
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-error-message class="popup__message popup__error">
+      <div class="popup__message-dialog">
+        <div class="popup__message-content">
+          <button
+            class="popup__message-close"
+            type="button"
+            aria-label="Закрити повідомлення"
+          ></button>
+          <div class="popup__message-text">
+            <h2 class="popup__message-title">Щось пішло не так!</h2>
+            <p>
+              Не вдалося надіслати заявку. <br />
+              Спробуйте ще раз трохи пізніше
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/js/script.js"></script>
   </body>
 </html>
