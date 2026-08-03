@@ -2,7 +2,7 @@
 
 > Responsive frontend landing page for a fictional nut-processing equipment brand.
 
-[Live Demo](oreh-test-project.vercel.app) · [Source Code](https://github.com/Maksim-9999/Oreh-test-project)
+[Live Demo](https://oreh-test-project.vercel.app) · [Source Code](https://github.com/Maksim-9999/Oreh-test-project)
 
 ## About the project
 
