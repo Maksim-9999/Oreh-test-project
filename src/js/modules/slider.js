@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination, Scrollbar, Mousewheel } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 const slider = () => {
   try {
     new Swiper(".test", {
-      modules: [Navigation, Pagination, Mousewheel],
+      modules: [Pagination, Mousewheel],
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
@@ -26,7 +26,7 @@ const slider = () => {
 
   try {
     new Swiper(".swiper__client", {
-      modules: [Navigation, Pagination, Mousewheel],
+      modules: [Pagination, Mousewheel],
       slidesPerView: 3,
       spaceBetween: 30,
       loop: true,

@@ -1,11 +1,10 @@
 {
-  "name": "gorihovod",
+  "name": "oreh-test-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Educational frontend demo inspired by a nut processing equipment website",
   "license": "ISC",
-  "author": "",
+  "author": "Maksim Duljuk",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
