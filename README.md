@@ -2,7 +2,7 @@
 
 > Responsive frontend landing page for a fictional nut-processing equipment brand.
 
-[Live Demo](PASTE_YOUR_VERCEL_LINK_HERE) · [Source Code](https://github.com/Maksim-9999/Oreh-test-project)
+[Live Demo](oreh-test-project.vercel.app) · [Source Code](https://github.com/Maksim-9999/Oreh-test-project)
 
 ## About the project
 
@@ -69,7 +69,7 @@ src/
 └── sass/
     ├── base/              # Variables, mixins, base styles
     ├── blocks/            # Page sections and components
-    ├── libs/               # Third-party styles
+    ├── libs/               # Fonts and third-party reset styles
     ├── ui/                 # Reusable UI elements
     └── style.scss          # Main stylesheet entry point
 ```
